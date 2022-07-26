@@ -21,7 +21,8 @@ module.exports = {
     class: 'S',
     hotswap: false,
     reverse: false,
-    keycaps: false
+    keycaps: false,
+    width: 1
   },
   body: p => {
     const standard = `
@@ -51,10 +52,10 @@ module.exports = {
       `
     const keycap = `
       ${'' /* keycap marks */}
-      (fp_line (start -9 -8.5) (end 9 -8.5) (layer Dwgs.User) (width 0.15))
-      (fp_line (start 9 -8.5) (end 9 8.5) (layer Dwgs.User) (width 0.15))
-      (fp_line (start 9 8.5) (end -9 8.5) (layer Dwgs.User) (width 0.15))
-      (fp_line (start -9 8.5) (end -9 -8.5) (layer Dwgs.User) (width 0.15))
+      (fp_line (start ${-9 * p.param.width} -8.5) (end ${9 * p.param.width} -8.5) (layer Dwgs.User) (width 0.15))
+      (fp_line (start ${9 * p.param.width} -8.5) (end ${9 * p.param.width} 8.5) (layer Dwgs.User) (width 0.15))
+      (fp_line (start ${9 * p.param.width} 8.5) (end ${-9 * p.param.width} 8.5) (layer Dwgs.User) (width 0.15))
+      (fp_line (start ${-9 * p.param.width} 8.5) (end ${-9 * p.param.width} -8.5) (layer Dwgs.User) (width 0.15))
       `
     function pins(def_neg, def_pos, def_side) {
       if(p.param.hotswap) {
@@ -70,8 +71,8 @@ module.exports = {
       } else {
           return `
             ${''/* pins */}
-            (pad 1 thru_hole circle (at ${def_pos}5 -3.8) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.from.str})
-            (pad 2 thru_hole circle (at ${def_pos}0 -5.9) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.to.str})
+            (pad 1 thru_hole circle (at ${def_pos}5 -3.8) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) ${p.net.from.str})
+            (pad 2 thru_hole circle (at ${def_pos}0 -5.9) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) ${p.net.to.str})
           `
       }
     }

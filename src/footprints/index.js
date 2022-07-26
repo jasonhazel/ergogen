@@ -17,4 +17,13 @@ module.exports = {
     slider: require('./slider'),
     trrs: require('./trrs'),
     via: require('./via'),
+    puck: require('./puck'),
+    mousebites: require('./mousebites'),
+    xiao: require('./xiao'),
+    pimoroni: require('./pimoroni'),
+    text: require('./text'),
+    promicro_pretty: require('./promicro_pretty'),
+    nice_nano: require('./nice_nano'),
+    m2: require('./m2'),
+    pin: require('./pin'),
 }

@@ -17,7 +17,8 @@ module.exports = {
       class: 'S',
 		  side: 'F',
 		  reverse: false,
-      keycaps: false
+      keycaps: false,
+      width: 1
     },
     body: p => {
 	    const standard = `
@@ -56,17 +57,18 @@ module.exports = {
         (fp_line (start -5.8 2.6) (end -5.8 -2.95) (layer Edge.Cuts) (width 0.12))
         (fp_line (start 5.8 -2.95) (end 5.8 2.6) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -5.8 -2.95) (end 5.8 -2.95) (layer Edge.Cuts) (width 0.12))
-        
+
+
         ${''/* stabilizers */}    
         (pad 3 thru_hole circle (at 5.3 -4.75) (size 1.6 1.6) (drill 1.1) (layers *.Cu *.Mask) (clearance 0.2))
         (pad 4 thru_hole circle (at -5.3 -4.75) (size 1.6 1.6) (drill 1.1) (layers *.Cu *.Mask) (clearance 0.2))
       `
       const keycap = `
         ${'' /* keycap marks */}
-        (fp_line (start -9 -8.5) (end 9 -8.5) (layer Dwgs.User) (width 0.15))
-        (fp_line (start 9 -8.5) (end 9 8.5) (layer Dwgs.User) (width 0.15))
-        (fp_line (start 9 8.5) (end -9 8.5) (layer Dwgs.User) (width 0.15))
-        (fp_line (start -9 8.5) (end -9 -8.5) (layer Dwgs.User) (width 0.15))
+        (fp_line (start ${-9 * p.param.width} -8.5) (end ${9 * p.param.width} -8.5) (layer Dwgs.User) (width 0.15))
+        (fp_line (start ${9 * p.param.width} -8.5) (end ${9 * p.param.width} 8.5) (layer Dwgs.User) (width 0.15))
+        (fp_line (start ${9 * p.param.width} 8.5) (end ${-9 * p.param.width} 8.5) (layer Dwgs.User) (width 0.15))
+        (fp_line (start ${-9 * p.param.width} 8.5) (end ${-9 * p.param.width} -8.5) (layer Dwgs.User) (width 0.15))
         `
       function pins(def_neg, def_pos) {
         return `
