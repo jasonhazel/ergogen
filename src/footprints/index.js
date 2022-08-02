@@ -1,16 +1,17 @@
 module.exports = {
+    // switches
     alps: require('./alps'),
-    button: require('./button'),
     choc: require('./choc'),
     chocmini: require('./chocmini'),
+    mx: require('./mx'),
+    // other
+    button: require('./button'),
     diode: require('./diode'),
     jstph: require('./jstph'),
     jumper: require('./jumper'),
-    mx: require('./mx'),
     oled: require('./oled'),
     omron: require('./omron'),
     pad: require('./pad'),
-    promicro: require('./promicro'),
     rgb: require('./rgb'),
     rotary: require('./rotary'),
     scrollwheel: require('./scrollwheel'),
@@ -19,11 +20,14 @@ module.exports = {
     via: require('./via'),
     puck: require('./puck'),
     mousebites: require('./mousebites'),
-    xiao: require('./xiao'),
     pimoroni: require('./pimoroni'),
     text: require('./text'),
-    promicro_pretty: require('./promicro_pretty'),
-    nice_nano: require('./nice_nano'),
     m2: require('./m2'),
     pin: require('./pin'),
+    // mcus
+    blackpill: require('./blackpill'),
+    promicro_pretty: require('./promicro_pretty'),
+    xiao: require('./xiao'),
+    promicro: require('./promicro'),
+    nice_nano: require('./nice_nano'),
 }
