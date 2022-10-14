@@ -3,8 +3,8 @@
 module.exports = {
   nets: {
     VIN: 'VIN',
-    SWDIO: 'SWDIO',
-    SWDCLK: 'SWDCLK',
+    DIO: 'DIO',
+    CLK: 'CLK',
     RST: 'RST',
     GND: 'GND',
     P0: 'P0',
@@ -18,8 +18,10 @@ module.exports = {
     P8: 'P8',
     P9: 'P9',
     P10: 'P10',
-    RAW3V3: 'RAW3V3',
-    RAW5V: 'RAW5V'
+    '3V3': '3V3',
+    RAW: 'RAW',
+    BATp: 'BAT+',
+    BATn: 'BAT-'
   },
   params: {
     class: 'MCU',
@@ -52,18 +54,18 @@ module.exports = {
   (pad "10" thru_hole circle (at 16.581 -7.95782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.P9.str})
   (pad "11" thru_hole circle (at 16.581 -10.49782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.P10.str})
   (pad "11" smd oval (at 16.99768 -10.49782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net.P10.str})
-  (pad "12" smd oval (at 16.99768 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net.RAW3V3.str})
-  (pad "12" thru_hole circle (at 16.581 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.RAW3V3.str})
+  (pad "12" smd oval (at 16.99768 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net['3V3'].str})
+  (pad "12" thru_hole circle (at 16.581 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net['3V3'].str})
   (pad "13" smd oval (at 16.99768 -15.57782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net.GND.str})
   (pad "13" thru_hole circle (at 16.581 -15.57782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.GND.str})
-  (pad "14" thru_hole circle (at 16.581 -18.11782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.RAW5V.str})
-  (pad "14" thru_hole oval (at 16.99768 -18.11782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net.RAW5V.str})
-  (pad "15" thru_hole oval (at 7.7 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.VIN.str})
-  (pad "16" thru_hole oval (at 10.25 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.GND.str})
-  (pad "17" thru_hole circle (at 7.698803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.SWDIO.str})
-  (pad "18" thru_hole circle (at 10.238803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.SWDCLK.str})
-  (pad "19" thru_hole circle (at 7.698803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.RST.str})
-  (pad "20" thru_hole circle (at 10.238803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.GND.str})
+  (pad "14" thru_hole circle (at 16.581 -18.11782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.net.RAW.str})
+  (pad "14" thru_hole oval (at 16.99768 -18.11782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.param.side}.Cu" "${p.param.side}.Paste" "${p.param.side}.Mask") ${p.net.RAW.str})
+  (pad "15" thru_hole oval (at 7.7 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.DIO.str})
+  (pad "16" thru_hole oval (at 10.25 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.CLK.str})
+  (pad "17" thru_hole circle (at 7.698803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.RST.str})
+  (pad "18" thru_hole circle (at 10.238803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.GND.str})
+  (pad "19" thru_hole circle (at 7.698803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.BATp.str})
+  (pad "20" thru_hole circle (at 10.238803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.net.BATn.str})
 
   ${``/* Silkscreen */}
   (fp_line (start 13.39342 -22.42312) (end 13.39342 -15.06982) (layer "${p.param.side}.SilkS") (width 0.127))

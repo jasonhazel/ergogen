@@ -19,13 +19,13 @@ module.exports = {
 
         
         ${'' /* pins */}
-        (pad 4 thru_hole oval (at 1.6 2.18 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (pad 4 thru_hole oval (at 0.0 -3.81 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
         ${p.net.SDA.str})
-        (pad 3 thru_hole oval (at 1.6 4.72 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (pad 3 thru_hole oval (at 0.0 -1.27 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
         ${p.net.SCL.str})
-        (pad 2 thru_hole oval (at 1.6 7.26 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (pad 2 thru_hole oval (at 0.0 1.27 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
         ${p.net.VCC.str})
-        (pad 1 thru_hole rect (at 1.6 9.8 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (pad 1 thru_hole rect (at 0.0 3.81 ${p.rot+270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
         ${p.net.GND.str})
         )
         `

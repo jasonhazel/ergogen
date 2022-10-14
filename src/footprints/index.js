@@ -4,30 +4,45 @@ module.exports = {
     choc: require('./choc'),
     chocmini: require('./chocmini'),
     mx: require('./mx'),
-    // other
+    pg1350: require('./pg1350'),
+    // inputs
+    psp: require('./psp'),
     button: require('./button'),
-    diode: require('./diode'),
-    jstph: require('./jstph'),
     jumper: require('./jumper'),
-    oled: require('./oled'),
     omron: require('./omron'),
-    pad: require('./pad'),
-    rgb: require('./rgb'),
-    rotary: require('./rotary'),
     scrollwheel: require('./scrollwheel'),
+    rotary: require('./rotary'),
+    pimoroni: require('./pimoroni'),
+
+    // components
+    fpc: require('./fpc'),
+    res: require('./res'), //resistor
+    diode: require('./diode'), 
+    jstph: require('./jstph'),
+    pad: require('./pad'),
+    via: require('./via'),
+    pin: require('./pin'),
+    ams1117: require('./ams1117'),
+    cap: require('./cap'),
+    '74hc595': require('./74hc595'),
+    trace: require('./trace'),
+
+    // outputs
+    oled: require('./oled'),
+    rgb: require('./rgb'),
     slider: require('./slider'),
     trrs: require('./trrs'),
-    via: require('./via'),
     puck: require('./puck'),
     mousebites: require('./mousebites'),
-    pimoroni: require('./pimoroni'),
     text: require('./text'),
     m2: require('./m2'),
-    pin: require('./pin'),
+
     // mcus
     blackpill: require('./blackpill'),
     promicro_pretty: require('./promicro_pretty'),
     xiao: require('./xiao'),
     promicro: require('./promicro'),
     nice_nano: require('./nice_nano'),
+    elitec: require('./elitec'),
+    controller: require('./controller'),
 }

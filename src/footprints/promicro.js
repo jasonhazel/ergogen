@@ -127,8 +127,8 @@ module.exports = {
         return `
           ${''/* (fp_text user B+ (at -16.51 ${def_pos}4.8 ${p.rot + 90}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)))) */}
           ${''/* (fp_text user B- (at -16.51 ${def_neg}4.8 ${p.rot + 90}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)))) */}
-          (pad 25 thru_hole roundrect (at -16.51 ${def_pos}7.62 0) (size 1.6 1.6) (drill 1.1) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.net.Bplus.str})
-          (pad 25 thru_hole roundrect (at -16.51 ${def_neg}7.62 0) (size 1.6 1.6) (drill 1.1) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.net.Bminus.str})
+          (pad 25 thru_hole rect (at -16.51 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  ${p.net.Bplus.str})
+          (pad 25 thru_hole rect (at -16.51 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  ${p.net.Bminus.str})
         `
       } else {
         return ''
