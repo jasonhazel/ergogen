@@ -4,13 +4,13 @@ module.exports = {
   },
   params: {
     class: 'trace',
-    width: 0.3,
+    width: 0.25,
     height: 1,
     front: true,
     back: true,
     text: '',
     align: 'left',
-    mirrored: '=mirrored'
+    // mirrored: '=mirrored'
   },
   body: p => {
 

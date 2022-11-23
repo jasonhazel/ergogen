@@ -10,7 +10,7 @@ module.exports = {
         back: true,
         text: '',
         align: 'left',
-        mirrored: '=mirrored'
+        // mirrored: '=mirrored'
     },
     body: p => {
 

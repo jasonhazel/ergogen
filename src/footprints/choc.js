@@ -71,8 +71,8 @@ module.exports = {
       } else {
           return `
             ${''/* pins */}
-            (pad 1 thru_hole circle (at ${def_pos}5 -3.8) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) ${p.net.from.str})
-            ${p.param.reverse && def_side == 'B' ? '' : `(pad 2 thru_hole circle (at ${def_pos}0 -5.9) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) ${p.net.to.str})`}
+            (pad 1 thru_hole circle (at ${def_pos}5 -3.8) (size 2.5 2.5) (drill 1.5) (layers *.Cu B.Mask) ${p.net.from.str})
+            ${p.param.reverse && def_side == 'B' ? '' : `(pad 2 thru_hole circle (at ${def_pos}0 -5.9) (size 2.5 2.5) (drill 1.5) (layers *.Cu B.Mask) ${p.net.to.str})`}
           `
       }
     }

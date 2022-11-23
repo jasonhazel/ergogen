@@ -278,6 +278,7 @@ exports.parse = (config, points, outlines, units) => {
             // key-level footprints
             for (const [p_name, point] of Object.entries(points)) {
                 for (const [f_name, f] of Object.entries(point.meta.footprints || {})) {
+                    console.log(p_name, f_name)
                     footprints.push(footprint(f, `${p_name}.footprints.${f_name}`, points, point, net_indexer, component_indexer, units, {references}))
                 }
             }

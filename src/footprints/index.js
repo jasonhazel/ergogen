@@ -1,10 +1,15 @@
 module.exports = {
+    // personal
+    badWings: require('./bad_wings'),
+
     // switches
     alps: require('./alps'),
     choc: require('./choc'),
     chocmini: require('./chocmini'),
     mx: require('./mx'),
     pg1350: require('./pg1350'),
+    xswitch: require('./xswitch'),
+    chocswap: require('./chocswap'),
     // inputs
     psp: require('./psp'),
     button: require('./button'),
@@ -13,6 +18,7 @@ module.exports = {
     scrollwheel: require('./scrollwheel'),
     rotary: require('./rotary'),
     pimoroni: require('./pimoroni'),
+    reset: require('./reset'),
 
     // components
     fpc: require('./fpc'),
@@ -26,6 +32,10 @@ module.exports = {
     cap: require('./cap'),
     '74hc595': require('./74hc595'),
     trace: require('./trace'),
+    drill: require('./drill'),
+    dot: require('./dot'),
+    standoff: require('./standoff'),
+    drill_cut: require('./drill_cut'),
 
     // outputs
     oled: require('./oled'),
@@ -40,7 +50,7 @@ module.exports = {
     // mcus
     blackpill: require('./blackpill'),
     promicro_pretty: require('./promicro_pretty'),
-    xiao: require('./xiao'),
+    xiao: require('./xiao_ble'),
     promicro: require('./promicro'),
     nice_nano: require('./nice_nano'),
     elitec: require('./elitec'),

@@ -53,8 +53,8 @@ module.exports = {
         `
 
         const via = `
-        ${'' /* (pad 2 thru_hole circle (at 1.65 0) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.net.from.str}) */}
-        (pad 1 thru_hole circle (at -3 0) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.net.to.str})
+        (pad 2 thru_hole circle (at 2.35 0) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.net.from.str})
+        (pad 1 thru_hole circle (at -2.35 0) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.net.to.str})
         `
         return `(${standard}
             ${p.param.side == 'front' || p.param.side == 'both' ? front : '' }

@@ -12,13 +12,13 @@ module.exports = {
         const left = p.param.side == 'F' ? '-' : ''
         const right = p.param.side == 'F' ? '' : '-'
 
-        const model = `  (model "${'${KICAD6_3DMODEL_DIR}'}/Button_Switch_SMD.3dshapes/SW_SPDT_PCM12.wrl" (offset(xyz 0 0 0)) (scale(xyz 1 1 1)) (rotate(xyz 0 0 ${p.param.side == 'F' ? '180' : '0'})) ) `
+        const model = `(model "${'${KICAD6_3DMODEL_DIR}'}/Button_Switch_SMD.3dshapes/SW_SPDT_PCM12.wrl" (offset(xyz 0 0 0)) (scale(xyz 1 1 1)) (rotate(xyz 0 0 ${p.param.side == 'F' ? '180' : '0'})) ) `
         return `
         
         (module E73:SPDT_C128955 (layer ${p.param.side}.Cu) (tstamp 5BF2CC3C)
 
             ${p.at /* parametric position */}
-
+            (attr smd)
             ${'' /* footprint reference */}
             (fp_text reference "${p.ref}" (at 0 0) (layer ${p.param.side}.SilkS) ${p.ref_hide} (effects (font (size 1.27 1.27) (thickness 0.15))))
             (fp_text value "" (at 0 0) (layer ${p.param.side}.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
